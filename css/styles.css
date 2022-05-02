@@ -415,7 +415,6 @@ a {
   font-weight: 600;
   font-style: normal;
   margin-bottom: 0;
- 
 }
 
 .quote__line {
@@ -426,12 +425,11 @@ a {
 .quote__author-company {
   font-size: 2rem;
   color: var(--color-headings);
-  opacity: .4;
+  opacity: 0.4;
   font-style: normal;
-
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .quote {
     font-size: 2rem;
   }
@@ -443,5 +441,22 @@ a {
   .quote__author-company {
     font-size: 1.6rem;
   }
+}
 
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+  }
 }
