@@ -530,16 +530,14 @@ a {
   margin: 0;
 }
 
-
 .callout .btn {
   justify-self: center;
   align-self: center;
 }
 
-@media screen and (min-width:768px) {
-
+@media screen and (min-width: 768px) {
   .callout .grid--1x2 {
-    grid-template-columns: 1fr auto ;
+    grid-template-columns: 1fr auto;
   }
 
   .callout__content {
@@ -564,7 +562,6 @@ a {
   font-size: 3rem;
 }
 
-
 .collapsible__wordpress {
   transform: rotate(-90deg);
   transition: transform 0.5s;
@@ -586,12 +583,10 @@ a {
   opacity: 1;
 }
 
-
 /* Blocks */
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
-  
 }
 
 .block__header {
@@ -612,12 +607,12 @@ a {
 }
 
 .block--skewed-right {
-  padding-bottom: calc(var(--padding-vertical) + 4rem); 
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
 }
 
 .block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 4rem); 
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
 
@@ -628,3 +623,65 @@ a {
   margin: 0 auto;
 }
 
+/* Navigation */
+
+.navigation {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 2px solid grey;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.navigation__list {
+  width: 100%;
+  margin: 0;
+}
+
+.navigation__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.navigation__item > a {
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+.navigation__item > a:hover {
+  color: #fff;
+}
+
+.navigation__toggler {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.navigation.collapsible--expanded .navigation__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+.navigation__brand {
+  transform: translateY(5px);
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__toggler {
+    display: none;
+  }
+  .navigation__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+  .navigation__item {
+    border: 0;
+  }
+}
