@@ -140,7 +140,6 @@ a {
 .list {
   list-style-type: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -295,6 +294,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 15px 25px;
+  width: 0;
 }
 
 .input-group .btn {
@@ -660,7 +660,6 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 2px solid grey;
   padding: 0 1rem;
   align-items: center;
 }
@@ -736,6 +735,7 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+    margin-top: 3rem;
   }
 }
 
@@ -749,8 +749,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -839,5 +840,94 @@ a {
     width: auto;
     max-width: 700px;
     justify-self: end;
+  }
+}
+
+/* Footer Block */
+
+.footer {
+  background: #232323;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.footer a {
+  color: #666;
+  transition: color 0.5s;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer__brand {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.footer__brand img {
+  /* TODO: Consider refactoring this and applying it to all images. */
+  width: 100%;
+  max-width: 230px;
+}
+
+.footer__copyright {
+  color: white;
+  opacity: 0.3;
+  font-size: 2.1rem;
+}
+
+.footer .list {
+  margin: 1rem 0rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer .collapsible__wordpress {
+    display: none;
+  }
+
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.2rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+
+  .footer a {
+    font-size: 1.2rem;
+  }
+
+  .footer__section li {
+    line-height: 1;
   }
 }
